@@ -1,1 +1,1 @@
-aspell
+aspell-python-py3
