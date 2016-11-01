@@ -4,6 +4,19 @@ import re
 
 class Spell(HalModule):
 
+	options = {
+		'active': {
+			'type'    : 'bool',
+			'prompt'  : 'Correct spelling without prompting',
+			'default' : 'false',
+		},
+		'active': {
+			'type'    : 'string',
+			'prompt'  : 'Language code',
+			'default' : 'en',
+		},
+	}
+
 	def init(self):
 		self.active = (self.config.get('active')) or False
 		self.lang = (self.config.get('lang')) or 'en'
